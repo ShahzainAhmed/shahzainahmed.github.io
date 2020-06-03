@@ -27,11 +27,11 @@ function toggle_onclick($win, $navbar, width){
 
 var typed = new Typed('#typed' , {
     strings: [
-        'Web Developer',
-        'Graphics Designer',
+        'Web-Developer',
+        'Graphic Designer',
         'Computer Programmer',
-        'Writer',
-        'Illustrator',
+        'Writer'
+        
         
     ],
     typeSpeed: 50,
@@ -41,11 +41,11 @@ var typed = new Typed('#typed' , {
 
 var typed_2 = new Typed('#typed_2' , {
     strings: [
-        'Web Developer',
-        'Graphics Designer',
+        'Web-Developer',
+        'Graphic Designer',
         'Computer Programmer',
-        'Writer',
-        'Illustrator',
+        'Writer'
+        
     ],
     typeSpeed: 50,
     backSpeed: 50,
