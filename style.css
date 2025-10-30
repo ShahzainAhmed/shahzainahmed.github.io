@@ -1,39 +1,7 @@
+/* --------------------------------------------------
+   IMPORTS AND ROOT VARIABLES
+-------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=Oswald|Rambla|Staatliches&display=swap');
-
-#loader {
-    border: 12px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 12px solid #444444;
-    width: 70px;
-    height: 70px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.center {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    /* font-family: 'Roboto Mono'; */
-}
-
-.bio {
-    text-align: justify;
-}
 
 :root {
     --color-black: #000000;
@@ -44,7 +12,19 @@ body {
     --font-ram: 'Rambla', sans-serif;
 }
 
-/* global classes */
+/* --------------------------------------------------
+   GLOBAL AND UTILITY CLASSES
+-------------------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.bio {
+    text-align: justify;
+}
+
 .font-staat {
     font: normal 400 18px var(--font-staat);
 }
@@ -85,8 +65,50 @@ body {
     background-color: var(--color-black);
 }
 
-/* #global classes */
+/* Centered positioning utility */
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 
+/* Remove underline from links */
+.link-no-underline,
+.link-clean {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link-no-underline:hover,
+.link-clean:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --------------------------------------------------
+   LOADER ANIMATION
+-------------------------------------------------- */
+#loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* --------------------------------------------------
+   HEADER AND NAVIGATION
+-------------------------------------------------- */
 #header {
     position: fixed;
     top: 0;
@@ -116,14 +138,10 @@ body {
 }
 
 #header .toggle-button {
-    /* background: #000000; */
-    /* color: var(--color-white); */
     position: fixed;
-    /* border-radius: 100%; */
-    overflow: hidden;
     top: 25px;
     right: 20px;
-    /* border: 4px solid var(--color-border); */
+    overflow: hidden;
 }
 
 .wave {
@@ -138,12 +156,25 @@ body {
     width: 1000px !important;
 }
 
+/* Icons */
 .ico {
     padding: 2px;
 }
 
-/* site-main */
+/* Responsive header behavior */
+@media screen and (min-width: 768px) {
+    .toggle-button {
+        display: none;
+    }
 
+    #header {
+        z-index: 0;
+    }
+}
+
+/* --------------------------------------------------
+   INTRO SECTION (Banner)
+-------------------------------------------------- */
 .site-banner .banner-area,
 #particles-js {
     background: url(./assets/Banner_image.jpg) no-repeat;
@@ -151,7 +182,6 @@ body {
     width: 100%;
     height: 100vh;
     filter: blur(0px);
-    /* filter: brightness(50%); */
     position: relative;
     overflow: hidden;
 }
@@ -164,54 +194,15 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.sk {
-    color: #7e7d7d;
-    margin: 10px;
-    /* margin-right: 5px; */
-}
-
-.sk:hover {
-    animation-duration: 1s;
-    animation-iteration-count: initial;
-    animation-name: icon_color;
-
-}
-
-.filter_img {
-    filter: blur(20px);
-}
-
-@keyframes icon_color {
-    50% {
-        color: #2b2b2b
-    }
-}
-
-.tilt:hover {
-    animation-duration: .1s;
-    animation-iteration-count: 2;
-    animation-name: jitter;
-}
-
-@keyframes jitter {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(15deg);
-    }
-
-    75% {
-        transform: rotate(-15deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-.author-img {
+/* Profile Image */
+.site-banner .banner-area .author .author-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    background: url(./assets/profile_full.jpg) no-repeat;
+    background-size: 175%;
+    background-position: 53% -10px;
     box-shadow: 2px 2px 100px rgb(20, 10, 10);
 }
 
@@ -239,21 +230,119 @@ body {
     }
 }
 
-.site-banner .banner-area .author .author-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: auto;
-    background: url(./assets/profile_full.jpg) no-repeat;
-    background-size: 175%;
-    background-position: 53% -10px;
-}
 
+/* --------------------------------------------------
+   SKILLS SECTION
+-------------------------------------------------- */
 .skill .bars p,
 .site-content .skill .bars span {
     line-height: 10px;
 }
 
+.sk {
+    color: #7e7d7d;
+    margin: 10px;
+}
+
+.sk:hover {
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+    animation-name: icon_color;
+}
+
+@keyframes icon_color {
+    50% {
+        color: #2b2b2b;
+    }
+}
+
+
+/* --------------------------------------------------
+   EXPERIENCE SECTION
+-------------------------------------------------- */
+/* Job description text alignment */
+#experience .panel p span.description {
+    display: block;
+    text-align: justify;
+    min-height: 200px;
+}
+
+/* --------------------------------------------------
+   PROJECTS SECTION
+-------------------------------------------------- */
+/* Panel styling for uniform layout */
+#projects .panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Description area with scrolling */
+#projects .panel .project-content {
+    min-height: 150px;
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: justify;
+    padding-right: 5px;
+    scrollbar-width: thin;
+}
+
+/* Custom scrollbar for WebKit browsers */
+#projects .panel .project-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+#projects .panel .project-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#projects .panel .project-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Project image styles */
+#projects .panel .project-image {
+    width: 100%;
+    aspect-ratio: 12 / 9;
+    background-color: #e0e0e0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Staatliches', cursive;
+    font-size: 18px;
+    color: #666;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    overflow: hidden;
+}
+
+#projects .panel .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons section */
+#projects .panel .project-links {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* --------------------------------------------------
+   CONTACT ME SECTION
+-------------------------------------------------- */
 #footer form .row .col input[type="text"],
 #footer form .row .col input[type="email"],
 #footer form textarea {
@@ -263,16 +352,9 @@ body {
     padding: 1.5rem 1rem;
 }
 
-@media screen and (min-width: 768px) {
-    .toggle-button {
-        display: none;
-    }
-
-    #header {
-        z-index: 0;
-    }
-}
-
+/* --------------------------------------------------
+   CARD AND CONTAINER LAYOUTS
+-------------------------------------------------- */
 .container {
     width: 1200px;
     display: grid;
@@ -324,8 +406,10 @@ body {
     transition: 0.5s;
 }
 
+/* --------------------------------------------------
+   LISTS AND REPOSITORY STYLING
+-------------------------------------------------- */
 .list-group-item {
-    /* display: inline; */
     margin-top: 25px;
     display: flexbox;
 }
@@ -340,12 +424,7 @@ body {
 }
 
 #userRepos li li:hover {
-    /* transition-delay: 0.5s; */
-
     background-color: #f1efef;
-    /* animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-name: project_color; */
 }
 
 @keyframes project_color {
@@ -354,6 +433,9 @@ body {
     }
 }
 
+/* --------------------------------------------------
+   SCROLL TO TOP BUTTON
+-------------------------------------------------- */
 .scrollTop {
     position: fixed;
     bottom: -100px;
@@ -370,11 +452,41 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
-
 }
 
 .scrollTop.active {
     bottom: 40px;
     visibility: visible;
     opacity: 1;
+}
+
+/* --------------------------------------------------
+   ANIMATION UTILITIES
+-------------------------------------------------- */
+.tilt:hover {
+    animation-duration: .1s;
+    animation-iteration-count: 2;
+    animation-name: jitter;
+}
+
+@keyframes jitter {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(15deg);
+    }
+
+    75% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.filter_img {
+    filter: blur(20px);
 }

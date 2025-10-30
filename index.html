@@ -84,8 +84,7 @@
                     </div>
                     <div class="row m-0">
                         <div class="col-sm-5 pl-0">
-                            <img src="./assets/profile_full.jpg" alt="profile image" class="img-fluid about_me_image"
-                                style="will-change: transform; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+                            <img src="./assets/profile_full.jpg" alt="profile image" class="img-fluid about_me_image">
                         </div>
                         <div class="col-sm-6">
                             <h6 class="text-uppercase font-os font-size-16 text-muted">About Me</h6>
@@ -102,35 +101,48 @@
                                 GDSC MUET, where I mentored peers and encouraged strong collaboration in design and
                                 technology.
                             </p>
+
                             <div class="d-flex flex-row flex-wrap justify-content-between py-1">
-                                <div class="d-flex flex-column">
+                                <div class="d-flex flex-column contact-links">
                                     <p class="font-ram">
-                                        <i class="devicon-github-plain"></i>
-                                        <span class="text-black-50"> &nbsp; @ShahzainAhmed</span>
+                                        <a href="https://github.com/ShahzainAhmed" target="_blank"
+                                            class="link-no-underline">
+                                            <i class="devicon-github-plain text-dark"></i>
+                                            <span class="text-black-50">&nbsp; @ShahzainAhmed</span>
+                                        </a>
                                     </p>
                                     <p class="font-ram">
-                                        <i class="fab fa-linkedin-in"></i>
-                                        <span class="text-black-50"> &nbsp; @ShahzainAhmed</span>
+                                        <a href="https://www.linkedin.com/in/ShahzainAhmed" target="_blank"
+                                            class="link-no-underline">
+                                            <i class="fab fa-linkedin-in text-dark"></i>
+                                            <span class="text-black-50">&nbsp; @ShahzainAhmed</span>
+                                        </a>
                                     </p>
                                     <p class="font-ram">
-                                        <i class="fab fa-behance"></i>
-                                        <span class="text-black-50"> &nbsp; @ShahzainAhmed</span>
+                                        <a href="https://www.behance.net/ShahzainAhmed" target="_blank"
+                                            class="link-no-underline">
+                                            <i class="fab fa-behance text-dark"></i>
+                                            <span class="text-black-50">&nbsp; @ShahzainAhmed</span>
+                                        </a>
                                     </p>
                                     <p class="font-ram">
-                                        <i class="fas fa-envelope"></i>
-                                        <span class="text-black-50"> &nbsp; shahzainahmed57@gmail.com</span>
+                                        <a href="mailto:shahzainahmed57@gmail.com" class="link-no-underline">
+                                            <i class="fas fa-envelope text-dark"></i>
+                                            <span class="text-black-50">&nbsp; shahzainahmed57@gmail.com</span>
+                                        </a>
                                     </p>
-                                    <p class="font-ram">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span class="text-black-50"> &nbsp; Pakistan</span>
-                                    </p>
+                                    <!-- <p class="font-ram">
+                                        <i class="fas fa-map-marker-alt text-dark"></i>
+                                        <span class="text-black-50">&nbsp; Pakistan</span>
+                                    </p> -->
                                 </div>
-                                <!-- </div>
+                            </div>
+                            <!-- </div>
                             <a href="https://drive.google.com/open?id=1MOq392jL4Kd0P5gRvPo6DpH1-WyfA47l"
                                 target="_blank">
                                 <button class="btn btn-outline-dark text-uppercase mr-3">Download CV</button></a> -->
-                            </div>
                         </div>
+                    </div>
                 </section>
                 <!-- /about me area END -->
 
@@ -201,14 +213,6 @@
 
                 <!-- Experience START -->
                 <section class="reference bg-light py-5 px-4" id="experience">
-                    <style>
-                        /* Only justify the job description text */
-                        #experience .panel p span.description {
-                            display: block;
-                            text-align: justify;
-                            min-height: 200px;
-                        }
-                    </style>
 
                     <div class="refer py-3">
                         <h5 class="text-uppercase font-os font-size-16 text-muted">What is my</h5>
@@ -285,87 +289,6 @@
 
                 <!-- Projects START -->
                 <section class="reference bg-light py-5 px-4" id="projects">
-                    <style>
-                        /* Panel styling for uniform card layout */
-                        #projects .panel {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
-                        }
-
-                        /* Fixed height for project descriptions */
-                        #projects .panel .project-content {
-                            min-height: 150px;
-                            max-height: 150px;
-                            overflow-y: auto;
-                            /* Enables vertical scrolling if needed */
-                            overflow-x: hidden;
-                            /* Prevents horizontal scroll */
-                            text-align: justify;
-                            padding-right: 5px;
-                            /* Optional for scroll aesthetics */
-                            scrollbar-width: thin;
-                            /* For Firefox */
-                        }
-
-                        /* Optional: nicer scrollbar for WebKit browsers */
-                        #projects .panel .project-content::-webkit-scrollbar {
-                            width: 6px;
-                        }
-
-                        #projects .panel .project-content::-webkit-scrollbar-thumb {
-                            background-color: rgba(0, 0, 0, 0.2);
-                            border-radius: 10px;
-                        }
-
-                        #projects .panel .project-content::-webkit-scrollbar-track {
-                            background: transparent;
-                        }
-
-                        .project-image img {
-                            transition: transform 0.3s ease, box-shadow 0.3s ease;
-                        }
-
-                        .project-image img:hover {
-                            transform: scale(1.05);
-                            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-                        }
-
-                        /* Style for project image area */
-                        #projects .panel .project-image {
-                            width: 100%;
-                            aspect-ratio: 12 / 9;
-                            /* keeps the image proportional */
-                            background-color: #e0e0e0;
-                            margin-bottom: 10px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            font-family: 'Staatliches', cursive;
-                            font-size: 18px;
-                            color: #666;
-                            border-top-right-radius: 50px;
-                            border-bottom-left-radius: 50px;
-                            overflow: hidden;
-                            /* ensures image stays within rounded corners */
-                        }
-
-                        #projects .panel .project-image img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            border-top-right-radius: 50px;
-                            border-bottom-left-radius: 50px;
-                        }
-
-
-                        /* Buttons area pinned to bottom */
-                        #projects .panel .project-links {
-                            margin-top: auto;
-                            display: flex;
-                            justify-content: space-between;
-                        }
-                    </style>
 
                     <div class="refer py-3">
                         <h5 class="text-uppercase font-os font-size-16 text-muted">what are my</h5>
@@ -550,7 +473,7 @@
         badges.forEach(badge => {
             const badgeHTML = `
             <div class="col-sm-2 pb-3">
-                <a href="${badge.link}" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                <a href="${badge.link}" target="_blank" rel="noopener noreferrer" class="link-clean">
                     <img src="${badge.image}" width="100" height="100" alt="${badge.title}" class="img-fluid tilt">
                     <h4 class="font-rami py-2">${badge.title.replace(/\n/g, "<br>")}</h4>
                 </a>
