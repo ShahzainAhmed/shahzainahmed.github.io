@@ -322,6 +322,14 @@
                             background: transparent;
                         }
 
+                        .project-image img {
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        }
+
+                        .project-image img:hover {
+                            transform: scale(1.05);
+                            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                        }
 
                         /* Style for project image area */
                         #projects .panel .project-image {
@@ -513,7 +521,7 @@
     <div class="col-md-4 col-sm-6 mb-4 text-center">
       <div class="panel border p-4">
         <div class="project-image">
-          <img src="${project.image}" alt="${project.title}">
+        <img src="${project.image}" alt="${project.title}">
         </div>
         <h4 class="font-ram py-2">${project.title}</h4>
         <div class="project-content">
