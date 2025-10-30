@@ -71,7 +71,6 @@ const projects = [
         github: "https://github.com/ShahzainAhmed/KusmiTeaApp",
         demo: "https://www.linkedin.com/feed/update/urn:li:activity:7180887470878695424/"
     },
-    // Start here
     {
         title: "Travel Adventure",
         image: "assets/projects/project10.png",
