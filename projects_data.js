@@ -191,4 +191,12 @@ const projects = [
         github: "https://github.com/ShahzainAhmed/Art_Gallery",
         demo: "https://www.linkedin.com/feed/update/urn:li:activity:7386687848151683072/"
     },
+    {
+        title: "Travelly",
+        image: "assets/projects/project25.png",
+        description:
+            "Travelly is a sleek Flutter travel app that makes exploring the world simple and inspiring. Browse iconic landmarks and hidden gems with swipe-based cards, discover details like ratings and prices, and plan your next adventure effortlessly.",
+        github: "https://github.com/ShahzainAhmed/Travelly",
+        demo: "" // update it
+    },
 ];
