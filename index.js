@@ -28,8 +28,8 @@ function toggle_onclick($win, $navbar, width) {
 var typed = new Typed('#typed', {
     strings: [
         'Mobile App Developer',
-        'Graphic Designer',
-
+        'Flutter Developer',
+        'Android &amp; iOS Developer'
     ],
     typeSpeed: 50,
     backSpeed: 50,
@@ -39,7 +39,8 @@ var typed = new Typed('#typed', {
 var typed_2 = new Typed('#typed_2', {
     strings: [
         'Mobile App Developer',
-        'Graphic Designer',
+        'Flutter Developer',
+        'Android &amp; iOS Developer'
     ],
     typeSpeed: 50,
     backSpeed: 50,
@@ -55,5 +56,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
-
