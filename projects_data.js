@@ -80,7 +80,7 @@ const projects = [
         demo: "https://www.linkedin.com/feed/update/urn:li:activity:7249775138819194880/"
     },
     {
-        title: "Car Rental BLoC",
+        title: "Modern Car Rental",
         image: "assets/projects/project11.jpg",
         description:
             "A modern Flutter-based car rental app built with the BLoC architecture for a seamless user experience. Car Rental Modern features smooth animations, intuitive navigation, detailed car listings with pricing and fuel info, and an integrated live map for easy rental location access and trip planning.",
@@ -197,6 +197,6 @@ const projects = [
         description:
             "Travelly is a sleek Flutter travel app that makes exploring the world simple and inspiring. Browse iconic landmarks and hidden gems with swipe-based cards, discover details like ratings and prices, and plan your next adventure effortlessly.",
         github: "https://github.com/ShahzainAhmed/Travelly",
-        demo: "" // update it
+        demo: "https://www.linkedin.com/feed/update/urn:li:activity:7405184647669968896/"
     },
 ];

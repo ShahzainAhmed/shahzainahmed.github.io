@@ -263,7 +263,7 @@ body {
 /* Job description text alignment */
 #experience .panel p span.description {
     display: block;
-    text-align: justify;
+    text-align: center;
     min-height: 200px;
 }
 
@@ -283,9 +283,18 @@ body {
     max-height: 150px;
     overflow-y: auto;
     overflow-x: hidden;
-    text-align: justify;
+    text-align: center;
     padding-right: 5px;
     scrollbar-width: thin;
+    padding-bottom: 20px;
+    mask-image: linear-gradient(to bottom,
+            black 0%,
+            black 85%,
+            transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom,
+            black 0%,
+            black 85%,
+            transparent 100%);
 }
 
 /* Custom scrollbar for WebKit browsers */
@@ -314,8 +323,8 @@ body {
     font-family: 'Staatliches', cursive;
     font-size: 18px;
     color: #666;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+    /* border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px; */
     overflow: hidden;
 }
 
@@ -323,8 +332,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
+    /* border-top-right-radius: 50px;
+        border-bottom-left-radius: 50px; */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
