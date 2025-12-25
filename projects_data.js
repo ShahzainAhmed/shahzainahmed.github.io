@@ -199,4 +199,12 @@ const projects = [
         github: "https://github.com/ShahzainAhmed/Travelly",
         demo: "https://www.linkedin.com/feed/update/urn:li:activity:7405184647669968896/"
     },
+    {
+        title: "Dream Journey",
+        image: "assets/projects/project26.png",
+        description:
+            "Swipe through living city stories with dynamic video cards, and dive deeper into each destination through a rich, interactive Flutter experience.",
+        github: "https://github.com/ShahzainAhmed/Dream_Journey",
+        demo: "https://www.linkedin.com/feed/update/urn:li:activity:7410018293270437890/"
+    },
 ];
