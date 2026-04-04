@@ -211,7 +211,7 @@ const projects = [
         title: "Artistic Exploration",
         image: "assets/projects/project27.jpg",
         description:
-            "Swipe through living city stories with dynamic video cards, and dive deeper into each destination through a rich, interactive Flutter experience.",
+            "Browse classical artworks with a buttery-smooth UI, and dive deeper into each masterpiece through an elegant, immersive Flutter experience.",
         github: "https://github.com/ShahzainAhmed/Artistic_Exploration",
         demo: "https://www.linkedin.com/feed/update/urn:li:activity:7410018293270437890/"
     },
