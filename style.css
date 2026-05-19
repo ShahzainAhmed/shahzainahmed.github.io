@@ -281,33 +281,36 @@ body {
 #projects .panel .project-content {
     min-height: 150px;
     max-height: 150px;
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
     text-align: center;
-    padding-right: 5px;
-    scrollbar-width: thin;
+    padding-right: 4px;
     padding-bottom: 20px;
-    mask-image: linear-gradient(to bottom,
-            black 0%,
-            black 85%,
-            transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom,
-            black 0%,
-            black 85%,
-            transparent 100%);
+    transition: all 0.25s ease;
 }
 
-/* Custom scrollbar for WebKit browsers */
+/* Enable scroll only on hover */
+#projects .panel:hover .project-content {
+    overflow-y: auto;
+}
+
+/* Hide scrollbar by default */
 #projects .panel .project-content::-webkit-scrollbar {
-    width: 6px;
+    width: 0px;
+    background: transparent;
 }
 
-#projects .panel .project-content::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+/* Show scrollbar on hover */
+#projects .panel:hover .project-content::-webkit-scrollbar {
+    width: 4px;
 }
 
-#projects .panel .project-content::-webkit-scrollbar-track {
+#projects .panel:hover .project-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.18);
+    border-radius: 20px;
+}
+
+#projects .panel:hover .project-content::-webkit-scrollbar-track {
     background: transparent;
 }
 
@@ -820,10 +823,10 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.featured-image-wrap img:hover {
+/* .featured-image-wrap img:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .featured-project-card {
     display: flex;
