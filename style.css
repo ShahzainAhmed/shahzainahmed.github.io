@@ -853,3 +853,11 @@ section {
     display: flex;
     gap: 10px;
 }
+
+body {
+    visibility: visible;
+}
+
+#loader {
+    display: none;
+}
