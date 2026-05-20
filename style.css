@@ -872,3 +872,89 @@ body {
     opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+.portfolio-stats div {
+    background: #ffffff;
+    border-radius: 26px;
+    padding: 34px 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease,
+        border-color 0.28s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: default;
+}
+
+.portfolio-stats div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.10);
+    border-color: rgba(0, 0, 0, 0.10);
+}
+
+.portfolio-stats strong {
+    transition: transform 0.28s ease;
+    display: inline-block;
+}
+
+.portfolio-stats div:hover strong {
+    transform: scale(1.04);
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modern-project-card::before,
+.featured-project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.18),
+            transparent);
+    transition: all 0.7s ease;
+}
+
+.modern-project-card:hover::before,
+.featured-project-card:hover::before {
+    left: 130%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.primary-nav .nav-link {
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.primary-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.25s ease;
+    transform: translateY(-50%);
+}
+
+.primary-nav .nav-link:hover::before {
+    width: 18px;
+}
