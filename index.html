@@ -505,7 +505,7 @@
             const html = `
                 <article class="featured-project-card reveal-on-scroll">
                     <div class="featured-image-wrap">
-                        <img src="${project.image}" alt="${project.title}" loading="lazy">
+                        <img src="${project.image}" alt="${project.title}" loading="eager">
                     </div>
                     <div class="featured-project-body">
                         <span class="project-category-pill">${getProjectCategory(project)}</span>
@@ -547,6 +547,14 @@
         }, { threshold: 0.12 });
 
         document.querySelectorAll(".reveal-on-scroll").forEach((item) => revealObserver.observe(item));
+
+        document.querySelectorAll(".project-image img, .featured-image-wrap img").forEach((img) => {
+            if (img.complete) {
+                img.classList.add("loaded");
+            } else {
+                img.addEventListener("load", () => img.classList.add("loaded"));
+            }
+        });
     </script>
 
     <!-- Badge data fetching from badge_data.js START -->

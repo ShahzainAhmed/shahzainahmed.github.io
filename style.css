@@ -727,7 +727,7 @@ section {
 
 #projects .panel.modern-project-card .project-image {
     border-radius: 0px;
-    background: #111;
+    background: #f3f4f6;
     margin-top: 4px;
 }
 
@@ -860,4 +860,15 @@ body {
 
 #loader {
     display: none;
+}
+
+.project-image img,
+.featured-image-wrap img {
+    opacity: 0;
+}
+
+.project-image img.loaded,
+.featured-image-wrap img.loaded {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
